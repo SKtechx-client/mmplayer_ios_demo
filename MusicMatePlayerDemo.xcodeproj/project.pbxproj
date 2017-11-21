@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7BC0F721FBAB19F00D45E8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BC0F711FBAB19F00D45E8F /* AppDelegate.m */; };
+		C7BC0F751FBAB19F00D45E8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BC0F741FBAB19F00D45E8F /* ViewController.m */; };
+		C7BC0F781FBAB19F00D45E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BC0F761FBAB19F00D45E8F /* Main.storyboard */; };
+		C7BC0F7A1FBAB19F00D45E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BC0F791FBAB19F00D45E8F /* Assets.xcassets */; };
+		C7BC0F7D1FBAB19F00D45E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BC0F7B1FBAB19F00D45E8F /* LaunchScreen.storyboard */; };
+		C7BC0F801FBAB19F00D45E8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BC0F7F1FBAB19F00D45E8F /* main.m */; };
+		C7BC0F891FBAB2B300D45E8F /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC0F881FBAB2B300D45E8F /* PlayerController.swift */; };
+		E3EC95A942EC2D62A528F561 /* Pods_MusicMatePlayerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A40F0FF7DB21642CF59482A /* Pods_MusicMatePlayerDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A40F0FF7DB21642CF59482A /* Pods_MusicMatePlayerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicMatePlayerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BFFD61290E4D0F612F9482F /* Pods-MusicMatePlayerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicMatePlayerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicMatePlayerDemo/Pods-MusicMatePlayerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A45D895660D2C1B93C67C9B1 /* Pods-MusicMatePlayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicMatePlayerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicMatePlayerDemo/Pods-MusicMatePlayerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C7BC0F6D1FBAB19F00D45E8F /* MusicMatePlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicMatePlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7BC0F701FBAB19F00D45E8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C7BC0F711FBAB19F00D45E8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C7BC0F731FBAB19F00D45E8F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C7BC0F741FBAB19F00D45E8F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C7BC0F771FBAB19F00D45E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7BC0F791FBAB19F00D45E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7BC0F7C1FBAB19F00D45E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7BC0F7E1FBAB19F00D45E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7BC0F7F1FBAB19F00D45E8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7BC0F871FBAB2B300D45E8F /* MusicMatePlayerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicMatePlayerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7BC0F881FBAB2B300D45E8F /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7BC0F6A1FBAB19F00D45E8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3EC95A942EC2D62A528F561 /* Pods_MusicMatePlayerDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BE50D1A12F9954A318A591D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A40F0FF7DB21642CF59482A /* Pods_MusicMatePlayerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		940CBE7FA8485FE0C8BFB71A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BFFD61290E4D0F612F9482F /* Pods-MusicMatePlayerDemo.debug.xcconfig */,
+				A45D895660D2C1B93C67C9B1 /* Pods-MusicMatePlayerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C7BC0F641FBAB19F00D45E8F = {
+			isa = PBXGroup;
+			children = (
+				C7BC0F6F1FBAB19F00D45E8F /* MusicMatePlayerDemo */,
+				C7BC0F6E1FBAB19F00D45E8F /* Products */,
+				940CBE7FA8485FE0C8BFB71A /* Pods */,
+				5BE50D1A12F9954A318A591D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C7BC0F6E1FBAB19F00D45E8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7BC0F6D1FBAB19F00D45E8F /* MusicMatePlayerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7BC0F6F1FBAB19F00D45E8F /* MusicMatePlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C7BC0F861FBAB27000D45E8F /* Player */,
+				C7BC0F701FBAB19F00D45E8F /* AppDelegate.h */,
+				C7BC0F711FBAB19F00D45E8F /* AppDelegate.m */,
+				C7BC0F731FBAB19F00D45E8F /* ViewController.h */,
+				C7BC0F741FBAB19F00D45E8F /* ViewController.m */,
+				C7BC0F761FBAB19F00D45E8F /* Main.storyboard */,
+				C7BC0F791FBAB19F00D45E8F /* Assets.xcassets */,
+				C7BC0F7B1FBAB19F00D45E8F /* LaunchScreen.storyboard */,
+				C7BC0F7E1FBAB19F00D45E8F /* Info.plist */,
+				C7BC0F7F1FBAB19F00D45E8F /* main.m */,
+			);
+			path = MusicMatePlayerDemo;
+			sourceTree = "<group>";
+		};
+		C7BC0F861FBAB27000D45E8F /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				C7BC0F881FBAB2B300D45E8F /* PlayerController.swift */,
+				C7BC0F871FBAB2B300D45E8F /* MusicMatePlayerDemo-Bridging-Header.h */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7BC0F6C1FBAB19F00D45E8F /* MusicMatePlayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7BC0F831FBAB19F00D45E8F /* Build configuration list for PBXNativeTarget "MusicMatePlayerDemo" */;
+			buildPhases = (
+				E8386708D24DC0BF40A195A9 /* [CP] Check Pods Manifest.lock */,
+				C7BC0F691FBAB19F00D45E8F /* Sources */,
+				C7BC0F6A1FBAB19F00D45E8F /* Frameworks */,
+				C7BC0F6B1FBAB19F00D45E8F /* Resources */,
+				6476F458003872F1D3DB91B5 /* [CP] Embed Pods Frameworks */,
+				FDBD030EFB8678AAB703E619 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicMatePlayerDemo;
+			productName = MusicMatePlayerDemo;
+			productReference = C7BC0F6D1FBAB19F00D45E8F /* MusicMatePlayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7BC0F651FBAB19F00D45E8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = sktechx;
+				TargetAttributes = {
+					C7BC0F6C1FBAB19F00D45E8F = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C7BC0F681FBAB19F00D45E8F /* Build configuration list for PBXProject "MusicMatePlayerDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7BC0F641FBAB19F00D45E8F;
+			productRefGroup = C7BC0F6E1FBAB19F00D45E8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7BC0F6C1FBAB19F00D45E8F /* MusicMatePlayerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7BC0F6B1FBAB19F00D45E8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7BC0F7D1FBAB19F00D45E8F /* LaunchScreen.storyboard in Resources */,
+				C7BC0F7A1FBAB19F00D45E8F /* Assets.xcassets in Resources */,
+				C7BC0F781FBAB19F00D45E8F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6476F458003872F1D3DB91B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MusicMatePlayerDemo/Pods-MusicMatePlayerDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/MusicMatePlayer_Debug/Debug/MusicMatePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/MusicMatePlayer/Release/MusicMatePlayer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MusicMatePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MusicMatePlayer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicMatePlayerDemo/Pods-MusicMatePlayerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8386708D24DC0BF40A195A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusicMatePlayerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBD030EFB8678AAB703E619 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicMatePlayerDemo/Pods-MusicMatePlayerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7BC0F691FBAB19F00D45E8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7BC0F751FBAB19F00D45E8F /* ViewController.m in Sources */,
+				C7BC0F801FBAB19F00D45E8F /* main.m in Sources */,
+				C7BC0F891FBAB2B300D45E8F /* PlayerController.swift in Sources */,
+				C7BC0F721FBAB19F00D45E8F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7BC0F761FBAB19F00D45E8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7BC0F771FBAB19F00D45E8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7BC0F7B1FBAB19F00D45E8F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7BC0F7C1FBAB19F00D45E8F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7BC0F811FBAB19F00D45E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C7BC0F821FBAB19F00D45E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7BC0F841FBAB19F00D45E8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BFFD61290E4D0F612F9482F /* Pods-MusicMatePlayerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 7WFZ8PB563;
+				INFOPLIST_FILE = MusicMatePlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sktechx.MusicMatePlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicMatePlayerDemo/Player/MusicMatePlayerDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7BC0F851FBAB19F00D45E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A45D895660D2C1B93C67C9B1 /* Pods-MusicMatePlayerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 7WFZ8PB563;
+				INFOPLIST_FILE = MusicMatePlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sktechx.MusicMatePlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicMatePlayerDemo/Player/MusicMatePlayerDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7BC0F681FBAB19F00D45E8F /* Build configuration list for PBXProject "MusicMatePlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7BC0F811FBAB19F00D45E8F /* Debug */,
+				C7BC0F821FBAB19F00D45E8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7BC0F831FBAB19F00D45E8F /* Build configuration list for PBXNativeTarget "MusicMatePlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7BC0F841FBAB19F00D45E8F /* Debug */,
+				C7BC0F851FBAB19F00D45E8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7BC0F651FBAB19F00D45E8F /* Project object */;
+}
