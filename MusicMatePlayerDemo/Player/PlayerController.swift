@@ -21,7 +21,7 @@ import MusicMatePlayer
 }
 
 @objc class PlayerController: NSObject {
-    static let shared = PlayerController()
+    @objc static let shared = PlayerController()
     
     // FIXME: Singleton 객체이기 때문에 정확힌 Observer 패턴을 써야 한다.
     @objc weak var delegate: PlayerControllerDelegate?
@@ -45,7 +45,7 @@ import MusicMatePlayer
             .disposed(by: disposeBag)
         
         // onMetadata
-        Observable.combineLatest(player.currentTrackIndex, player.currentTime, player.duration) { ($0.0, $0.1, $0.2) }
+        Observable.combineLatest(player.currentTrackIndex, player.currentTime, player.duration) { ($0, $1, $2) }
             .throttle(1, scheduler: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] in
                 guard let `self` = self else { return }
@@ -134,7 +134,7 @@ extension PlayerController {
             self.delegate?.controller(self, didRetrivedSessionToken: player.sessionToken ?? "")
             
         case .currentMetadata:
-            _ = Observable.combineLatest(player.currentTrackIndex, player.currentTime, player.duration) { ($0.0, $0.1, $0.2) }
+            _ = Observable.combineLatest(player.currentTrackIndex, player.currentTime, player.duration) { ($0, $1, $2) }
                 .take(1)
                 .subscribe(onNext: { [weak self] in
                     guard let `self` = self else { return }
@@ -205,7 +205,10 @@ extension PlayerController {
             playerTrack.id = track["id"].intValue
             playerTrack.name = track["name"].string
             
-            playerTrack.artistNames = track["artistList"].array?.first?["name"].string
+            if let listObject = track["artistList"].array {
+                let nameList = listObject.map { $0["name"].stringValue }.filter { !$0.isEmpty }
+                playerTrack.artistNames = nameList.joined(separator: " & ")
+            }
             
             var album = PlayerAlbum()
             album.id = track["album"]["id"].intValue
@@ -229,37 +232,40 @@ extension PlayerController {
     }
     
     fileprivate func state(status: MusicPlayerStatus) -> String {
-        var state: String
+        var state: Int
+        var errorJson: String?
+        
         switch status {
         case .playing:
-            state = "{state:0, error:{}}"
-            
+            state = 0
         case .paused:
-            state = "{state:1, error:{}}"
-            
+            state = 1
         case let .stopped(error):
-            var errorString = ""
+            state = 2
             if let error = error {
+                var code: Int?
+                
                 switch error.kind {
                 case .network:
-                    errorString = "{code:1,message:\(error.localizedDescription)}"
+                    code = 1
                 case .needCellular:
-                    errorString = "{code:2,message:\(error.localizedDescription)}"
+                    code = 2
                 case .playPermission:
-                    errorString = "{code:3,message:\(error.localizedDescription)}"
+                    code = 3
                 case .invalidRefreshToken, .invalidRefreshTokenByChangePassword, .invalidSessionToken:
-                    errorString = "{code:4,message:\(error.localizedDescription)}"
-                case .audioSession, .prepareAsset:
+                    code = 4
+                case .audioSession, .prepareAsset, .failedToPlayToEndTime:
                     break
                 }
+                
+                if let code = code {
+                    errorJson = "{code:\(code),message:\(error.localizedDescription)}"
+                }
             }
-            
-            state = "{state:2, error:{\(errorString)}}"
-            
         case .connecting(_):
-            state = "{state:3, error:{}}"
+            state = 3
         }
         
-        return state
+        return "{state:\(state), error:{\(errorJson ?? "")}}"
     }
 }

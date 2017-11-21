@@ -72,7 +72,6 @@ static NSString * const frontendURL = @"http://172.21.85.30/apigw/v1/page/lpoint
     [NSLayoutConstraint activateConstraints:constraints];
     self.webView = webView;
 }
-    
 
 - (void)viewDidLoad {
     [super viewDidLoad];
