@@ -20,7 +20,7 @@
 @implementation ViewController
     
 static NSString * const messageHandlerName = @"musicmate";
-static NSString * const frontendURL = @"http://172.21.85.30/apigw/v1/page/lpoint/home?user_id=0000000001";
+static NSString * const frontendURL = @"http://211.188.213.11/apigw/v1/page/lpoint/home?user_id=12345678";
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
