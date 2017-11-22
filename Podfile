@@ -4,6 +4,6 @@ target 'MusicMatePlayerDemo' do
   use_frameworks!
 
   # 뮤직메이트 플레이어
-  pod 'MusicMatePlayer_Debug', '~> 0.9.14', :configuration => 'Debug'
-  pod 'MusicMatePlayer', '~> 0.9.14', :configuration => 'Release'
+  pod 'MusicMatePlayer_Debug', '~> 1.0', :configuration => 'Debug'
+  pod 'MusicMatePlayer', '~> 1.0', :configuration => 'Release'
 end
