@@ -9,6 +9,19 @@ or
 $ pod install --repo-update
 ```
 
+## info.plist 설정
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
+<key>UIBackgroundModes</key>
+<array>
+<string>audio</string>
+</array>
+```
+
 ## 중요 코드
 ### PlayerController.swift 
 - 플레이어 SDK Objective-C Wrapper

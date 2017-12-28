@@ -1,12 +1,12 @@
 PODS:
-  - Alamofire (4.5.1)
-  - MusicMatePlayer (1.0.0):
+  - Alamofire (4.6.0)
+  - MusicMatePlayer (1.0.6):
     - Alamofire (~> 4.5)
     - RxAlamofire (~> 3.0)
     - RxCocoa (~> 3.0)
     - RxSwift (~> 3.0)
     - SwiftyJSON (~> 3.1)
-  - MusicMatePlayer_Debug (1.0.0):
+  - MusicMatePlayer_Debug (1.0.6):
     - Alamofire (~> 4.5)
     - RxAlamofire (~> 3.0)
     - RxCocoa (~> 3.0)
@@ -27,9 +27,9 @@ DEPENDENCIES:
   - MusicMatePlayer_Debug (~> 1.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  MusicMatePlayer: 412b470436add85a9e6aaf07beb03c4ae0258668
-  MusicMatePlayer_Debug: 7a6af7623e71ee114a7f674bf1b7e0febed0bb55
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  MusicMatePlayer: 66d1815b9ad597fc0780e5957ce3567837b90ca2
+  MusicMatePlayer_Debug: 4e53f1dd9e33b07f7ce2b58288100d187613fb2a
   RxAlamofire: 5eb39188c4917ad98127c0ecb4878a61b7517003
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4

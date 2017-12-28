@@ -17,7 +17,7 @@ import MusicMatePlayer
     @objc func controller(_: PlayerController, didChangeState state: String)
     @objc func controller(_: PlayerController, didReceivePlayResponse response: String)
     @objc func controller(_: PlayerController, didReceiveLogResponse code: String)
-    @objc func controller(_: PlayerController, didRetrivedSessionToken token: String)
+    @objc func controller(_: PlayerController, didRetriveSessionToken token: String)
 }
 
 @objc class PlayerController: NSObject {
@@ -131,7 +131,7 @@ extension PlayerController {
             player.deviceId = params["deviceId"].string
             
         case .getToken:
-            self.delegate?.controller(self, didRetrivedSessionToken: player.sessionToken ?? "")
+            self.delegate?.controller(self, didRetriveSessionToken: player.sessionToken ?? "")
             
         case .currentMetadata:
             _ = Observable.combineLatest(player.currentTrackIndex, player.currentTime, player.duration) { ($0, $1, $2) }
@@ -254,7 +254,7 @@ extension PlayerController {
                     code = 3
                 case .invalidRefreshToken, .invalidRefreshTokenByChangePassword, .invalidSessionToken:
                     code = 4
-                case .audioSession, .prepareAsset, .failedToPlayToEndTime:
+                case .audioSession, .prepareAsset, .playerItem, .failedToPlayToEndTime:
                     break
                 }
                 
