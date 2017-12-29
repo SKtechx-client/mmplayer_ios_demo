@@ -9,18 +9,12 @@ or
 $ pod install --repo-update
 ```
 
-## info.plist 설정
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-<key>NSAllowsArbitraryLoads</key>
-<true/>
-</dict>
-<key>UIBackgroundModes</key>
-<array>
-<string>audio</string>
-</array>
-```
+## 프로젝트 설정
+### 네트워크
+<img src="https://user-images.githubusercontent.com/30849633/34426668-7eccc146-ec7c-11e7-9431-3783b186ece7.png"/>
+
+### 백그라운드
+<img src="https://user-images.githubusercontent.com/30849633/34426667-7ea26108-ec7c-11e7-89ca-8dd3c8b34a9f.png"/>
 
 ## 중요 코드
 ### PlayerController.swift 
