@@ -18,6 +18,7 @@ import MusicMatePlayer
     @objc func controller(_: PlayerController, didReceivePlayResponse response: String)
     @objc func controller(_: PlayerController, didReceiveLogResponse code: String)
     @objc func controller(_: PlayerController, didRetriveSessionToken token: String)
+    @objc func controller(_: PlayerController, didRetriveProperty property: String)
 }
 
 @objc class PlayerController: NSObject {
@@ -25,6 +26,8 @@ import MusicMatePlayer
     
     // FIXME: Singleton 객체이기 때문에 정확힌 Observer 패턴을 써야 한다.
     @objc weak var delegate: PlayerControllerDelegate?
+    
+    fileprivate var properties = [String: String]()
     
     fileprivate let player: MusicPlayer = MusicMateMusicPlayer()
     fileprivate let disposeBag = DisposeBag()
@@ -124,14 +127,24 @@ extension PlayerController {
             } else if mode == 2 {
                 player.repeatMode = .one
             }
+        
+        case .getToken:
+            self.delegate?.controller(self, didRetriveSessionToken: player.sessionToken ?? "")
             
         case .setToken:
             player.sessionToken = params["sessionToken"].string
             player.refreshToken = params["refreshToken"].string
             player.deviceId = params["deviceId"].string
             
-        case .getToken:
-            self.delegate?.controller(self, didRetriveSessionToken: player.sessionToken ?? "")
+        case .getProperty:
+            let key = params["key"].stringValue
+            let value = properties[key] ?? ""
+            delegate?.controller(self, didRetriveProperty: "{key:\"\(key)\",value:\"\(value)\"}")
+            
+        case .setProperty:
+            let key = params["key"].stringValue
+            let value = params["value"].stringValue
+            properties[key] = value
             
         case .currentMetadata:
             _ = Observable.combineLatest(player.currentTrackIndex, player.currentTime, player.duration) { ($0, $1, $2) }
@@ -188,10 +201,13 @@ extension PlayerController {
         case seek
         case shuffle
         case `repeat`
+        
+        case getToken
         case setToken
         
-        // request
-        case getToken
+        case getProperty
+        case setProperty
+        
         case currentMetadata
         case currentState
     }
@@ -259,7 +275,7 @@ extension PlayerController {
                 }
                 
                 if let code = code {
-                    errorJson = "{code:\(code),message:\(error.localizedDescription)}"
+                    errorJson = "{code:\(code),message:\"\(error.localizedDescription)\"}"
                 }
             }
         case .connecting(_):

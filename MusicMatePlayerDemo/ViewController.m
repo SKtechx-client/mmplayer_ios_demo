@@ -139,6 +139,11 @@ static NSString * const frontendURL = @"http://211.188.213.11/apigw/v1/page/lpoi
     [self evaluateJavascript:script];
 }
 
+- (void)controller:(PlayerController *)_ didRetriveProperty:(NSString *)property {
+    NSString *script = [NSString stringWithFormat:@"onProperty(%@)", property];
+    [self evaluateJavascript:script];
+}
+
 - (void)evaluateJavascript:(NSString *)javascript {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.webView evaluateJavaScript:javascript completionHandler:^(id result, NSError *error) {
