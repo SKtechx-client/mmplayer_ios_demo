@@ -134,6 +134,11 @@ static NSString * const frontendURL = @"http://211.188.213.11/apigw/v1/page/lpoi
     [self evaluateJavascript:script];
 }
 
+- (void)controller:(PlayerController *)_ didRetriveVersion:(NSString *)version {
+    NSString *script = [NSString stringWithFormat:@"onVersion(\"%@\")", version];
+    [self evaluateJavascript:script];
+}
+
 - (void)controller:(PlayerController *)_ didRetriveSessionToken:(NSString *)token {
     NSString *script = [NSString stringWithFormat:@"onToken(\"%@\")", token];
     [self evaluateJavascript:script];

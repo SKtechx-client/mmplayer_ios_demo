@@ -19,6 +19,7 @@ import MusicMatePlayer
     @objc func controller(_: PlayerController, didReceiveLogResponse code: String)
     @objc func controller(_: PlayerController, didRetriveSessionToken token: String)
     @objc func controller(_: PlayerController, didRetriveProperty property: String)
+    @objc func controller(_: PlayerController, didRetriveVersion version: String)
 }
 
 @objc class PlayerController: NSObject {
@@ -35,6 +36,7 @@ import MusicMatePlayer
     override private init() {
         super.init()
         
+        print("SDK Version: \(player.version)")
         bindPlayerEvent()
     }
     
@@ -127,9 +129,12 @@ extension PlayerController {
             } else if mode == 2 {
                 player.repeatMode = .one
             }
-        
+            
+        case .getVersion:
+            delegate?.controller(self, didRetriveVersion: player.version)
+            
         case .getToken:
-            self.delegate?.controller(self, didRetriveSessionToken: player.sessionToken ?? "")
+            delegate?.controller(self, didRetriveSessionToken: player.sessionToken ?? "")
             
         case .setToken:
             player.sessionToken = params["sessionToken"].string
@@ -201,6 +206,8 @@ extension PlayerController {
         case seek
         case shuffle
         case `repeat`
+        
+        case getVersion
         
         case getToken
         case setToken
