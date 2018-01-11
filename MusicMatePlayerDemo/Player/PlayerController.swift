@@ -289,6 +289,6 @@ extension PlayerController {
             state = 3
         }
         
-        return "{state:\(state), error:{\(errorJson ?? "")}}"
+        return "{state:\(state), error:\(errorJson ?? "")}"
     }
 }

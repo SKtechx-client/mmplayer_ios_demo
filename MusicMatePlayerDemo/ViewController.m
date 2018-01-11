@@ -21,6 +21,7 @@
     
 static NSString * const messageHandlerName = @"musicmate";
 static NSString * const frontendURL = @"http://211.188.213.11/apigw/v1/page/lpoint/home?user_id=12345678";
+//static NSString * const frontendURL = @"http://10.211.249.187:5000";
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
