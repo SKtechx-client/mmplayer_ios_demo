@@ -17,9 +17,13 @@ import MusicMatePlayer
     @objc func controller(_: PlayerController, didChangeState state: String)
     @objc func controller(_: PlayerController, didReceivePlayResponse response: String)
     @objc func controller(_: PlayerController, didReceiveLogResponse code: String)
-    @objc func controller(_: PlayerController, didRetriveSessionToken token: String)
+    
     @objc func controller(_: PlayerController, didRetriveProperty property: String)
+    
+    @objc func controller(_: PlayerController, didRetriveSessionToken token: String)
     @objc func controller(_: PlayerController, didRetriveVersion version: String)
+    @objc func controller(_: PlayerController, didRetriveRepeat repeat: Int)
+    @objc func controller(_: PlayerController, didRetriveShuffle shuffle: Bool)
 }
 
 @objc class PlayerController: NSObject {
@@ -116,11 +120,27 @@ extension PlayerController {
             let sec = params["position"].intValue
             player.seek(second: Double(sec))
             
-        case .shuffle:
+        case .getShuffle:
+            delegate?.controller(self, didRetriveShuffle: player.shuffleMode == .shuffle)
+            
+        case .setShuffle:
             let on = params["state"].boolValue
             player.shuffleMode = on ? .shuffle : .no
             
-        case .repeat:
+        case .getRepeat:
+            var repeatMode: Int
+            switch player.repeatMode {
+            case .no:
+                repeatMode = 0
+            case .repeat:
+                repeatMode = 1
+            case .one:
+                repeatMode = 2
+            }
+            
+            delegate?.controller(self, didRetriveRepeat: repeatMode)
+            
+        case .setRepeat:
             let mode = params["state"].intValue
             if mode == 0 {
                 player.repeatMode = .no
@@ -204,8 +224,12 @@ extension PlayerController {
         case previous
         case pause
         case seek
-        case shuffle
-        case `repeat`
+        
+        case getShuffle
+        case setShuffle
+        
+        case getRepeat
+        case setRepeat
         
         case getVersion
         

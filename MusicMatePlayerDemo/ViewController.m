@@ -150,6 +150,16 @@ static NSString * const frontendURL = @"http://211.188.213.11/apigw/v1/page/lpoi
     [self evaluateJavascript:script];
 }
 
+- (void)controller:(PlayerController *)_ didRetriveRepeat:(long)repeat {
+    NSString *script = [NSString stringWithFormat:@"onRepeat(%ld)", repeat];
+    [self evaluateJavascript:script];
+}
+
+- (void)controller:(PlayerController *)_ didRetriveShuffle:(BOOL)shuffle {
+    NSString *script = [NSString stringWithFormat:@"onShuffle(%@)", shuffle ? @"true" : @"false"];
+    [self evaluateJavascript:script];
+}
+
 - (void)evaluateJavascript:(NSString *)javascript {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.webView evaluateJavaScript:javascript completionHandler:^(id result, NSError *error) {
