@@ -116,6 +116,9 @@ extension PlayerController {
         case .pause:
             player.pause()
             
+        case .stop:
+            player.stop()
+            
         case .seek:
             let sec = params["position"].intValue
             player.seek(second: Double(sec))
@@ -223,6 +226,7 @@ extension PlayerController {
         case next
         case previous
         case pause
+        case stop
         case seek
         
         case getShuffle
