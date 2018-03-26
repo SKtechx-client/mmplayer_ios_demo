@@ -34,7 +34,7 @@ import MusicMatePlayer
     
     fileprivate var properties = [String: String]()
     
-    fileprivate let player: MusicPlayer = MusicMateMusicPlayer()
+    fileprivate let player: MusicPlayer = MusicMateMusicPlayer(appName: "MUSIC_MALL", API: nil)
     fileprivate let disposeBag = DisposeBag()
     
     override private init() {
